@@ -1,0 +1,109 @@
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.header-logo {
+	background-image: url('../../images/logo.svg');
+	min-width: 30px;
+	min-height: 30px;
+	background-repeat: no-repeat;
+	background-size: 30px auto;
+}
+
+.header-phone {
+	background-image: url('../../images/phone.svg');
+	min-width: 24px;
+	min-height: 24px;
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	cursor: pointer;
+}
+
+.header-phone:active {
+	min-width: 30px;
+	min-height: 30px;
+	background-size: 30px auto;
+}
+
+.header-phonelink {
+	display: none;
+}
+
+@media (min-width: 576px) {
+	.header-logo {
+		min-width: 45px;
+		min-height: 45px;
+		background-size: 45px auto;
+	}
+
+	.header-phone {
+		outline: transparent;
+		min-width: 40px;
+		min-height: 40px;
+		background-size: 40px auto;
+	}
+
+	.header-phone:active, .header-phone:hover {
+		outline: transparent;
+		min-width: 45px;
+		min-height: 45px;
+		background-size: 45px auto;
+	}
+}
+
+@media (min-width: 768px) {
+	.header-phone {
+		display: none;
+	}
+
+	.header-phonelink {
+		display: block;
+	}
+
+	.header-phonelink a {
+		font-size: 18px;
+		color: #ffffff;
+		text-decoration: none;
+	}
+}
+
+@media (min-width: 992px) {
+	.header-logo {
+		min-width: 60px;
+		min-height: 60px;
+		background-size: 60px auto;
+	}
+
+	.header-phonelink a {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.header-logo {
+		min-width: 68px;
+		min-height: 68px;
+		background-size: 68px auto;
+	}
+
+	.header-phonelink a {
+		font-size: 24px;
+	}
+}
