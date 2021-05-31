@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import { ButtonCheckOut } from '../ButtonCheckOut/ButtonCheckOut';
 
 
 const Overlay = styled.div`
@@ -27,38 +28,36 @@ const Banner = styled.div`
     background-image: url(${({img}) => img});
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px;
 `;
 
-const PriceWrapper = styled.div`
+const Contenet = styled.div`
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: calc(100% - 250px);
+`;
+
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 30px;
+    padding: 30px;
 `;
 
 const OpenName = styled.div`
     color: black;
+    font-family: 'Pacifico', cursive;
 `;
 const OpenPrice = styled.div`
     color: black;
+    font-family: 'Pacifico', cursive;
 `;
 
-const OpenButton = styled.button`
-    background: #299B01;
-    width: 250px;
-    height: 65px;
-    border: none;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 21px;
-    line-height: 25px;
-    color: #FFFFFF;
-    display: block;
-    margin: auto;
-`;
+
+
 
 
 export const ModalItem = ({ openItem, setOpenItem }) => {
@@ -74,11 +73,13 @@ export const ModalItem = ({ openItem, setOpenItem }) => {
         <Overlay id="overlay" onClick={closeModal}>
             <Modal>
                 <Banner img={openItem.img}/>
-                <PriceWrapper>
-                    <OpenName>{openItem.name}</OpenName>
-                    <OpenPrice>{openItem.price}₽</OpenPrice>
-                </PriceWrapper>
-                <OpenButton>Добавить</OpenButton>
+                    <Contenet>
+                        <Wrapper>
+                            <OpenName>{openItem.name}</OpenName>
+                            <OpenPrice>{openItem.price}₽</OpenPrice>
+                        </Wrapper>
+                        <ButtonCheckOut>Добавить</ButtonCheckOut>
+                    </Contenet>
             </Modal>
         </Overlay>
     )

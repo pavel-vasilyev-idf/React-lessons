@@ -3,6 +3,7 @@ import { NavBar } from './components/Navbar/NavBar'
 import { Menu } from './components/Menu/Menu'
 import { GlobalStyle } from './components/GlobalStyle/GlobalStyle'
 import { ModalItem } from './components/ModalItem/ModalItem'
+import { Order } from './components/Order/Order'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
     <> 
       <GlobalStyle/>
       <NavBar/>
+      <Order/>
       <Menu setOpenItem={setOpenItem}/>
       <ModalItem openItem={openItem} setOpenItem={setOpenItem}/>
     </>

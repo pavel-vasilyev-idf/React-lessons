@@ -14,7 +14,7 @@ const NavBarStyled = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    background-color: #299B01;
+    background-color: rgba(19, 107, 181, 0.7);
     color: #fff;
 `;
 
