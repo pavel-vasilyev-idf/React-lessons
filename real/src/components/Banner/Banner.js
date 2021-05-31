@@ -9,6 +9,6 @@ const BannerImage = styled.img`
 
 export const Banner = () => {
     return (
-        <BannerImage src={BannerImg} alt="banner"/>
+        <BannerImage src={ BannerImg } alt="banner"/>
     )
 }

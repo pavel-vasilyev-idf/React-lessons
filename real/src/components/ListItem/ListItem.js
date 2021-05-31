@@ -38,13 +38,15 @@ const Item = styled.li`
 `;
 
 
-export const ListItem = ({itemList}) => {
+export const ListItem = ({itemList, setOpenItem}) => {
     return (
         <List>
             {itemList.map(item => (
                 <Item 
                     key={item.id}
-                    img={item.img}>
+                    img={item.img}
+                    onClick={() => setOpenItem(item)}
+                    >
                     <p>{item.name}</p>
                     <span>{item.price.toLocaleString('ru-Ru', {style: 'currency', currency: 'RUB'})}</span>
                 </Item>
