@@ -46,7 +46,6 @@ export const OrderListItem = ({ order }) => {
                             .map( item => item.name)
                             .join(', ')
     
-
     return (
     <OrderItemStyled>
         <ItemName>{order.name} {order.choice}</ItemName>
